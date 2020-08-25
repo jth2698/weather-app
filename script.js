@@ -40,8 +40,6 @@ function populateSearchHistory() {
         })
     }
     searchHistoryDisplay.append(searchHistoryBtnGroup);
-
-    allSearchHistoryBtns = $("#search-history-button");
 }
 
 
@@ -54,7 +52,9 @@ searchBtn.on("click", function(event) {
     getWeather(city);
 
     searchHistory.push(city);
+
     localStorage.setItem("cities", JSON.stringify(searchHistory));
+
     populateSearchHistory();
 
     searchBox.val("");
@@ -116,9 +116,9 @@ function getWeather(city) {
             mainUV.text("UV Index: ");
             UVSpan.text(UVNumber);
 
-            if (UVNumber >= 8) {
+            if (UVNumber >= 10) {
                 UVSpan.addClass("bg-danger");
-            } else if (UVNumber >= 3 && UVNumber <= 7.99) {
+            } else if (UVNumber >= 6 && UVNumber <= 9.99) {
                 UVSpan.addClass("bg-warning");
             } else {
                 UVSpan.addClass("bg-success");
@@ -166,7 +166,6 @@ function getWeather(city) {
             var subForecastDate = fullForecastDate.substring(5, 10);
             forecastDate.text(subForecastDate);
 
-
             var forecastIcon = $("<img></img>");
             var iconSrc = "http://openweathermap.org/img/wn/" + forecastArray[i].weather[0].icon + "@2x.png";
             forecastIcon.attr("src", iconSrc);
@@ -190,5 +189,4 @@ function getWeather(city) {
         }
 
     })
-    populateSearchHistory();
 }
