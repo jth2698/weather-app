@@ -1,0 +1,14 @@
+.header {
+    margin: auto;
+    color: white;
+}
+
+#whole-container {
+    padding: 20px;
+}
+
+span {
+    height: 20px;
+    width: 40px;
+    color: white;
+}
