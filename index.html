@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css">
 
 </head>
@@ -14,49 +15,57 @@
 
     <section class="landing-page">
         <div class="video-container">
-            <video src="./assets/productionid-3843103_O9SmvKaA.compressed.mp4" autoplay muted loop id="background-video"></video>
+            <video src="./assets/productionid-3843103_O9SmvKaA.compressed.mp4" autoplay muted loop
+                id="background-video"></video>
         </div>
-        <div class="landing-content">
-            <div class="results-content container-fluid row">
-                <div class="col-md-4" id="main">
-                </div>
-                <div class="col-4">
-                    <h3>Search for a City</h3>
-                    <div class="input-group mb-3">
-                        <input type="text " class="form-control" id="search-box">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-light" id="search-button">Search</button>
-                        </div>
+        <div class="content">
+            <div id="search">
+                <h3>Search for a City</h3>
+                <div class="input-group mb-3">
+                    <input type="text " class="form-control" id="search-box">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-light" id="search-button">Search</button>
                     </div>
-                    <div id="search-history"></div>
                 </div>
+                <div id="search-history"></div>
             </div>
             <br>
-            <div class="col-md-8">
-                <div class="row" id="forecast">
-                </div>
+            <br>
+            <div id="results">
+                <div id="main"></div>
+                <div id="forecast"></div>
             </div>
-        </div>
-        </div>
         </div>
         </div>
     </section>
 
     <section id="credits">
         <h1>Credits</h1>
-        <p>Inspired by a <a href="https://codepen.io/bradtraversy/pen/BaoWWjb">Brad Traversy project</a> with some CSS from Brad.</p>
+        <p>Inspired by a <a href="https://codepen.io/bradtraversy/pen/BaoWWjb">Brad Traversy project</a> with some CSS
+            from Brad.</p>
         <br>
-        <p>Videos from open source aggregator, <a href="https://pexels.com">Pexels.com</a>. Videos are <a href="https://www.pexels.com/video/wild-grass-with-pink-flowers-in-full-bloom-3843103/">here</a>, <a href="https://www.pexels.com/video/time-lapse-video-of-clear-blue-sky-4433844/">here</a>,
-            <a href="https://www.pexels.com/video/video-of-sky-with-clouds-855785/">here</a>, <a href="https://www.pexels.com/video/rainy-weather-at-the-field-855592/">here</a>, and <a href="https://www.pexels.com/video/thunderstorm-856429/">here</a></p>
+        <p>Videos from open source aggregator, <a href="https://pexels.com">Pexels.com</a>. Videos are <a
+                href="https://www.pexels.com/video/wild-grass-with-pink-flowers-in-full-bloom-3843103/">here</a>, <a
+                href="https://www.pexels.com/video/time-lapse-video-of-clear-blue-sky-4433844/">here</a>,
+            <a href="https://www.pexels.com/video/video-of-sky-with-clouds-855785/">here</a>, <a
+                href="https://www.pexels.com/video/rainy-weather-at-the-field-855592/">here</a>, and <a
+                href="https://www.pexels.com/video/thunderstorm-856429/">here</a></p>
         <br>
-        <p>Shout-out to <a href="https://github.com/etorres-revature">Eric Torres</a> for pushing the envelope on these projects!</p>
+        <p>Shout-out to <a href="https://github.com/etorres-revature">Eric Torres</a> for pushing the envelope on these
+            projects!</p>
     </section>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js "
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
+        crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js "
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
+        crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
+        crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js "></script>
 

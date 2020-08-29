@@ -3,6 +3,12 @@
     --primary-color: #3a4052;
 }
 
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
@@ -10,12 +16,15 @@ body {
 
 .landing-page {
     height: 100vh;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff;
     padding: 0 20px;
 }
+
+/* brad traversy background video css */
 
 .video-container {
     position: absolute;
@@ -36,9 +45,38 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.results-content {
-    color: #fff;
-    padding: 20px 20px;
+.video-container:after {
+	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+}
+
+/* my css starts here, struggling somewhat with flexbox - layout not ideal */
+
+.content {
+    z-index: 2;
+    align-items: center;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#main div {
+    padding: 20px;
+}
+
+#forecast {
+    display: flex;
+    border: 1px #ccc solid;
 }
 
 span {
