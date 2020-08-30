@@ -17,6 +17,7 @@ body {
 .landing-page {
     height: 100vh;
     display: flex;
+    flex-shrink: 2;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -83,10 +84,6 @@ span {
     height: 20px;
     width: 40px;
     color: white;
-}
-
-.hide {
-    display: none;
 }
 
 #credits {
